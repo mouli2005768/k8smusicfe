@@ -1,0 +1,204 @@
+/* BASIC PAGE STYLE */
+.singlepage-container {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background: #0b0f1a;
+  padding-bottom: 40px;
+}
+
+/* HEADER */
+.header {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #111827;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  font-size: 1.8rem;
+  color: #ff004c;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #e5e7eb;
+  font-size: 1.1rem;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.signin-icon {
+  font-size: 3rem;
+  color: #42837e;
+  
+  cursor:pointer;
+}
+.signin-icon:hover {
+  color: #52dec5;
+  text-shadow: 0 0 12px #51819e;
+  transform: scale(1.1);
+}
+
+/* BODY */
+.body {
+  padding: 40px;
+}
+
+/* ABOUT SECTION */
+.section {
+  margin-bottom: 70px;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* WYNK STYLE HERO */
+.impact-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: linear-gradient(135deg, #06182e, #103953);
+  border-radius: 18px;
+  margin-top: 60px;
+  gap: 40px;
+}
+
+.impact-left h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.impact-left p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.impact-btn {
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  background: #e60000;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 22px;
+}
+
+.impact-btn:hover {
+  background: #ff3333;
+}
+
+.impact-right img {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ROLES SECTION */
+.roles h2 {
+  font-size: 2.3rem;
+  margin-bottom: 25px;
+}
+
+.roles-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.role-card {
+  background: #131c2b;
+  padding: 25px;
+  border-radius: 12px;
+  width: 50%;
+}
+
+.role-card h3 {
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.role-card p {
+  opacity: 0.9;
+}
+
+.role-card ul {
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+/* FOOTER */
+.footer {
+  background: #111827;
+  padding: 40px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+
+.footer-sections h4 {
+  margin-bottom: 10px;
+}
+
+.footer-sections ul li {
+  margin-bottom: 7px;
+  opacity: 0.85;
+}
+
+.social-icons svg {
+  margin-right: 15px;
+  font-size: 1.4rem;
+   transition: 0.3s ease;
+  cursor: pointer;
+}
+.social-icons svg:nth-child(2):hover {
+  color: #53d9e2;
+  text-shadow: 0 0 12px #ff4fd8;
+  transform: scale(1.2);
+}
+.social-icons svg:nth-child(1):hover {
+  color: #4bf9e2;
+  text-shadow: 0 0 12px #009dff;
+  transform: scale(1.2);
+}
+.social-icons svg:nth-child(3):hover {
+  color: #48f7c5;
+  text-shadow: 0 0 12px #4dc4ff;
+  transform: scale(1.2);
+}
+copyright {
+  margin-top: 20px;
+  text-align: center;
+  opacity: 0.7;
+}
