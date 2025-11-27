@@ -1,34 +1,35 @@
 import axios from "axios";
 
+// Base URL comes from environment variable (Vite)
 const API = axios.create({
-  baseURL: "http://localhost:8083/api",
+  baseURL: import.meta.env.VITE_BACKEND_URL,
 });
 
 // ================== USER AUTH ==================
 export const signIn = async (email, password) => {
   try {
-    const response = await axios.post("http://localhost:8083/api/user/signin", {
+    const response = await API.post("/user/signin", {
       emailid: email,
       password,
     });
-    return response.data.replace(/['"]+/g, "").trim();
+    return response.data;
   } catch (error) {
-    console.error("SignIn Error:", error.response || error.message);
+    console.error("SignIn Error:", error);
     return "401::Server Error";
   }
 };
 
 export const signUp = async (fullname, email, password, role) => {
   try {
-    const response = await axios.post("http://localhost:8083/api/user/signup", {
+    const response = await API.post("/user/signup", {
       fullname,
       emailid: email,
       password,
       role,
     });
-    return response.data.replace(/['"]+/g, "").trim();
+    return response.data;
   } catch (error) {
-    console.error("SignUp Error:", error.response || error.message);
+    console.error("SignUp Error:", error);
     return "401::Server Error";
   }
 };
@@ -56,7 +57,7 @@ export const makePayment = async (paymentData) => {
     const response = await API.post("/payments/pay", paymentData);
     return response.data;
   } catch (error) {
-    console.error("Payment Error:", error.response || error.message);
+    console.error("Payment Error:", error);
     throw error;
   }
 };
@@ -66,7 +67,7 @@ export const getPaymentStatus = async (email) => {
     const response = await API.get(`/payments/status/${email}`);
     return response.data;
   } catch (error) {
-    console.error("Payment Status Error:", error.response || error.message);
+    console.error("Payment Status Error:", error);
     return "Error fetching payment status";
   }
 };
@@ -81,10 +82,7 @@ export const addFavourite = (email, songId) =>
 export const removeFavourite = (email, songId) =>
   API.delete(`/favourites/remove?email=${email}&songId=${songId}`);
 
-
 // ================== ADMIN STATS ==================
 export const getAdminStats = () => API.get("/admin/stats");
-
-
 
 export default API;
